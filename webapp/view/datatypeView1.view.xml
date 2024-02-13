@@ -1,0 +1,55 @@
+<mvc:View xmlns:table="sap.ui.table"  controllerName="diffdataype.controller.datatypeView1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content >
+            <Table id="table" items="{taskdata>/datas}">
+                <columns>
+                    <Column id="col0">
+                    <Text id="t1" text="{i18n>num}"></Text>
+                    </Column>
+                    <Column id="col1">
+                    <Text id="t2" text="{i18n>name}"></Text>
+
+                    </Column>
+                    <Column id="col2">
+                    <Text id="t3" text="{i18n>weight}"></Text>
+
+                    </Column>
+                    <Column id="col3">
+                    <Text id="t4" text="{i18n>dob}"></Text>
+
+                    </Column>
+                    <Column id="col4">
+                    <Text id="t5" text="{i18n>datetime}"></Text>
+                    </Column>
+                    <Column id="col5">
+                    <Text id="t6" text="{i18n>amount}"></Text>
+
+                    </Column>
+                 </columns>
+                 <items>
+                    <ColumnListItem id="listitem">  
+                        <cells>
+                            <Text id="num" text="{taskdata>num}"></Text>
+                            <Text id="name" text="{taskdata>name}"></Text>
+                            <Input id="we" type="Text" placeholder="eg:50 kg" ></Input>
+                            <Input id="dob"  type="Date"  ></Input>
+                            <!-- <Input id="date" type="Datetime"  ></Input> -->
+                            <DateTimePicker  id="dat"  
+                                        value="{
+                                            path: '/dtValue',
+				                            type: 'sap.ui.model.type.DateTime'}" /> 
+                            <Input id="amnt" type="Number" placeholder="eg:100"></Input>
+
+                        
+                        </cells>
+
+                    </ColumnListItem>
+                 </items>
+        
+            </Table>
+        </content >
+
+    </Page>
+</mvc:View>
